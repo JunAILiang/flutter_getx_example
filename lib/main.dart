@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_getx_example/BottomSheetExample/BottomSheetExample.dart';
 import 'package:flutter_getx_example/DependecyInjectionExample/DependecyInjectionExample.dart';
 import 'package:flutter_getx_example/DialogExample/DialogExample.dart';
-import 'package:flutter_getx_example/GetConnectAndStateMixinExample/RoutesModule/AppPages.dart';
+import 'package:flutter_getx_example/GetConnectAndStateMixinExample/GetConnectAndStateMixinExample.dart';
 import 'package:flutter_getx_example/GetViewAndGetWidgetExample/GetViewAndGetWidgetExample.dart';
 import 'package:flutter_getx_example/GetXApiDataExample/GetXApiDataExample.dart';
 import 'package:flutter_getx_example/GetXBindingExample/binding/AllControllerBinding.dart';
@@ -49,10 +49,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      title: "GetX",
-      home: GetViewAndGetWidgetExample(),
-    );
+    // return GetMaterialApp(
+    //   title: "GetX",
+    //   home: GetConnectAndStateMixinExample(),
+    // );
 
 
     /// 命名式路由导航
@@ -104,13 +104,11 @@ class MyApp extends StatelessWidget {
     //   ],
     // );
 
-    // /// GetConnectAndStateMixin
-    // return GetMaterialApp(
-    //     title: "GetX",
-    //     // theme: ThemeData.dark(),
-    //   initialRoute: AppPages.INIT,
-    //   getPages: AppPages.routes,
-    // );
+
+    return GetMaterialApp(
+      title: "GetX",
+      home: GetXApiDataExample(),
+    );
 
   }
 }
